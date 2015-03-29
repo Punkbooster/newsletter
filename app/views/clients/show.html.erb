@@ -1,0 +1,19 @@
+<p>
+  <strong>Imie:</strong>
+  <%= @client.imie %>
+</p>
+
+<p>
+  <strong>Nazwisko:</strong>
+  <%= @client.nazwisko %>
+</p>
+
+<p>
+  <strong>E-mail:</strong>
+  <%= @client.email %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>
+
+
