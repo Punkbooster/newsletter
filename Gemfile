@@ -18,6 +18,7 @@ gem "haml"
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'bootstrap-wysihtml5-rails'
+gem "figaro"
 
 
 # Use jquery as the JavaScript library

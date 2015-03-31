@@ -15,6 +15,10 @@ class ClientsController < ApplicationController
   	def create
   		@client = Client.new client_params
   		if @client.save
+
+  			 # Tell the UserMailer to send a welcome email after save
+        	MyMailer.welcome_email(@client).deliver
+  			
   			redirect_to clients_path
   		else
   			render :action => :new
