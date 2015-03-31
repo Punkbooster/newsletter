@@ -15,6 +15,8 @@ class LettersController < ApplicationController
   	def create
   		@letter = Letter.new letter_params
   		if @letter.save
+  			 # Tell the MessageMailerr to send a Message email after save
+        	MessagesMailer.message(@clients.email).deliver
   			redirect_to letters_path
   		else
   			render :action => :new
