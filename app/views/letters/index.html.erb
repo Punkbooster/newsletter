@@ -1,5 +1,9 @@
-<% @letter.each do |letter| %>
-<p> <%= letter.title %></br> <%= letter.topic %></br> <%= letter.content %></br>
+<% @letters.each do |letter| %>
+
+<p><strong> Title: </strong> <%= letter.title %> </p> 
+<p><strong> Topic: </strong> <%= letter.topic %></p>
+<p><strong> Content: </strong> <%= letter.content %></p>
+
 <%= link_to "Edit", edit_letter_path(letter.id), class: 'btn btn-success' %>
 <%= link_to 'Show', letter_path(letter.id),  class: 'btn btn-warning' %>
 <%= link_to 'Destroy', letter_path(letter.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></p>

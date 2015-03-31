@@ -1,7 +1,10 @@
 <% @clients.each do |client| %>
-<p> <%= client.imie %>, <%= client.nazwisko %> <%= client.email %></p>
+
+<strong> <%= client.imie %> 
+<%= client.nazwisko %> </strong>, <%= client.email %> 
+
 <%= link_to "Edit", edit_client_path(client.id), class: 'btn btn-success' %>
 <%= link_to 'Show', client_path(client.id),  class: 'btn btn-warning' %>
-<%= link_to 'Destroy', client_path(client.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+<%= link_to 'Destroy', client_path(client.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %> </p>
 <% end %>
 <%= link_to "New", new_client_path, class: 'btn btn-primary btn-lg' %>

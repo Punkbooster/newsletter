@@ -1,7 +1,7 @@
 <h1>New Client</h1>
 
-<%= form_for @client do |form| %>
-	<%= form.text_field :imie %> </br>
+ <%= form_for @client do |form| %>
+	<p><strong> Name:</strong> <%= form.text_field :imie %> </p>
 
 	
 	<% if @client.errors.any? %>
@@ -13,8 +13,8 @@
 	</ul>
 	<% end %>
 	
-	<%= form.text_field :nazwisko %> </br>
-	<%= form.text_field :email %> </br>
+	<p><strong> Surname: </strong> <%= form.text_field :nazwisko %> </p>
+	<p> <strong> E-mail: </strong> <%= form.text_field :email %> </p>
 	<%= form.submit %>
 <% end %>
 

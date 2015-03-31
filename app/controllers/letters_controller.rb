@@ -1,7 +1,7 @@
 class LettersController < ApplicationController
 	
 	def index
-		@letter  = Letter.all
+		@letters  = Letter.all
 	end
 
 	def show

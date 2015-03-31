@@ -1,19 +1,19 @@
 <p>
   <strong>Title:</strong>
-  <%= @letters.title %>
+  <%= @letter.title %>
 </p>
 
 <p>
   <strong>Topic:</strong>
-  <%= @letters.topic %>
+  <%= @letter.topic %>
 </p>
 
 <p>
   <strong>Content:</strong>
-  <%= @letters.content %>
+  <%= @letter.content %>
 </p>
 
-<%= link_to 'Edit', edit_letter_path(@letters)title|
+<%= link_to 'Edit', edit_letter_path(@letter) %>
 <%= link_to 'Back', letters_path %>
 
 
