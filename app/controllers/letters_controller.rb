@@ -16,7 +16,11 @@ class LettersController < ApplicationController
   		@letter = Letter.new letter_params
   		if @letter.save
   			 # Tell the MessageMailerr to send a Message email after save
-        	MessagesMailer.message(@clients.email).deliver
+        	@clients = Client.all
+        	@clients.each do |client|
+        		MessageMailer.send_message(client).deliver
+        	end
+
   			redirect_to letters_path
   		else
   			render :action => :new
