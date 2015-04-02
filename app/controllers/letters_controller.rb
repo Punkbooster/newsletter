@@ -18,7 +18,7 @@ class LettersController < ApplicationController
   			 # Tell the MessageMailerr to send a Message email after save
         	@clients = Client.all
         	@clients.each do |client|
-        		MessageMailer.send_message(client).deliver
+        		MessageMailer.send_message(client, @letter).deliver
         	end
 
   			redirect_to letters_path

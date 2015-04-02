@@ -4,9 +4,12 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Dear <%= @client.imie %>, Here is a message for you from Newsletter.com</h1></br>
     
-    <p> <%= @title %> </p>    ???
+    <h3>Dear <%= @client.imie %>, Here is a message for you from Newsletter.com</h3>
+    
+    <p> Title: <%= @letter.title %> </p>
+    <p> Topic: <%= @letter.topic %> </p>
+    <p> Content: <%= @letter.content %> </p>
 
     <p>Thanks for joining and have a great day!</p>
   </body>
