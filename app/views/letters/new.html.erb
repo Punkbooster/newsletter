@@ -14,8 +14,8 @@
 	<% end %>
 	
 	<p> <strong> Topic: </strong> <%= form.text_field :topic %> </p>
-	<p> <strong> Content: </strong> <%= form.text_area :content %> </p>
-	<%= form.submit %>
+	<p> <strong> Content: </strong> <%= form.text_field :content %> </p>
+	<%= form.submit :submit_letter %>
 <% end %>
 
 <%= link_to 'Back', letters_path %>
