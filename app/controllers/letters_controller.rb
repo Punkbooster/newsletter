@@ -14,9 +14,11 @@ class LettersController < ApplicationController
 
   	def create
   		@letter = Letter.new letter_params
+
   		if @letter.save
   			 # Tell the MessageMailerr to send a Message email after save
         	@clients = Client.all
+
         	@clients.each do |client|
         		MessageMailer.send_message(client, @letter).deliver
         	end

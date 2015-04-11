@@ -49,6 +49,7 @@ group :development, :test do
   gem 'capybara-email'
   gem 'email_spec'
   gem 'action_mailer_cache_delivery'
+  gem 'guard-rspec'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

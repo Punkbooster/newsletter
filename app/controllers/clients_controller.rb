@@ -1,11 +1,7 @@
 class ClientsController < ApplicationController
 	
 	def index
-		if params[:search]
-    		@clients = Client.search(params[:search]).order("created_at DESC")
-  		else
-    		@clients = Client.all.order('created_at DESC')
-  		end
+    		@clients = Client.all
 	end
 
 	def show
